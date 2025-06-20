@@ -1,0 +1,135 @@
+/* Reset and base styles */
+#replay .popup button {
+  pointer-events: auto;
+}
+
+.no-click {
+  pointer-events: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Card container (used on index and waiting page) */
+.card {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.card>h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Index page input and button */
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Waiting page spinner */
+.spinner {
+  margin-top: 1rem;
+  border: 5px solid #ccc;
+  border-top: 5px solid #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Game page */
+#status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
+}
+
+#status {
+  display: none;
+}
+
+#status p {
+  margin-bottom: 0.5rem;
+}
+
+#replay {
+  margin-top: 0.5rem;
+}
+
+/* Player info */
+#player {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Game board layout */
+.outer {
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.inner:hover {
+  background-color: #ddd;
+}
